@@ -924,7 +924,7 @@ html,body{height:100%;background:var(--bg);color:var(--txt);font-family:'DM Sans
 <style id='business-cc-shell'>:root{--bcc-violet:#5B2EFF;--bcc-coral:#FF5C35;--bcc-magenta:#E91E8C;--bcc-amber:#F5A623;--bcc-ink:#0D0D12;--bcc-surface:#F8F8FC}.sidebar{background:linear-gradient(180deg,#0D0D12,#171027)!important}.sb-eye{color:#A8A5B8!important}.sb-name{color:#fff!important;font-family:'DM Sans',sans-serif!important;font-weight:800!important}.sb-name span{color:#FF5C35!important}.nb{color:#D8D5E3!important}.nb.active{background:linear-gradient(90deg,#5B2EFF,#E91E8C)!important;color:#fff!important}.nb:hover{background:rgba(91,46,255,.2)!important;color:#fff!important}.content{background:#F8F8FC!important}.bcc-brandbar{height:4px;background:linear-gradient(90deg,#5B2EFF,#E91E8C,#FF5C35,#F5A623)}</style></head>
 <body>
 <div class="app">
-<div class="sidebar" id="sidebar"><div class="bcc-brandbar"></div><div class="sb-logo"><div class="sb-eye">Business Command Center</div><div class="sb-name">Savvy<span>.</span></div><div id="bcc-meta" style="margin-top:8px;font-size:10px;line-height:1.65;color:#A8A5B8"><div><strong style="color:#fff">BCC v3</strong></div><div id="bcc-meta-date">—</div><div id="bcc-meta-calwk">Calendar Week —</div><div id="bcc-meta-sprint">Sprint —</div><div id="bcc-meta-time">—</div></div></div><div class="sb-sec"><div class="sb-lbl">Command</div><button class="nb active" id="nav-sfscore" onclick="showPage('sfscore',this)">★ SF Scorecard</button><button class="nb" id="nav-dash" onclick="showPage('dash',this)">Dashboard</button><button class="nb" id="nav-planning" onclick="showPage('planning',this)">Planning Queue</button><button class="nb" id="nav-sprints" onclick="showPage('sprints',this)">Sprint Planner</button><button class="nb" id="nav-items" onclick="showPage('items',this)">All Action Items</button></div><div class="sb-sec"><div class="sb-lbl">Lists</div><button class="nb" onclick="bccGoListName('RLA',this)">RLA</button><button class="nb" onclick="bccGoListName('Savvy Foundations',this)">Savvy Foundations</button><button class="nb" onclick="bccGoListName('Savvy Structure',this)">Savvy Structure</button><button class="nb" id="nav-itemtags" onclick="showPage('itemtags',this)">Tags</button></div><div class="sb-sec"><div class="sb-lbl">Management</div><button class="nb" id="nav-releases" onclick="goToList('releases')">Release Management</button><button class="nb" onclick="bccGoListName('Change Management',this)">Change Management</button><button class="nb" id="nav-knowledge" onclick="showPage('knowledge',this)">Knowledge Hub</button></div><div class="sb-sec"><div class="sb-lbl">Libraries</div><button class="nb" id="nav-productcatalog" onclick="showPage('productcatalog',this)">Product Catalog</button><button class="nb" id="nav-industryprofile" onclick="showPage('industryprofile',this)">Industry Profiles</button><button class="nb" id="nav-content" onclick="showPage('content',this)">Content Planner</button><button class="nb" id="nav-fieldcatalog" onclick="showPage('fieldcatalog',this)">Field Options Catalog</button><button class="nb" id="nav-workflows" onclick="showPage('workflows',this)">Workflows</button><button class="nb" id="nav-taglibrary" onclick="showPage('taglibrary',this)">Tag Library</button></div><div class="sb-sec"><div class="sb-lbl">Data</div><button class="nb" id="save-now-btn" onclick="saveNow()">💾 Save Now</button><button class="nb" onclick="backupToFile()">↓ Save to Device</button><button class="nb" onclick="restoreFromFile()">↑ Load from Device</button><button class="nb" id="drive-btn" onclick="driveSignIn()">☁️ <span id="drive-btn-label">Connect Drive</span></button><div id="drive-status" style="font-size:10px;color:#A8A5B8;padding:4px 10px;line-height:1.4">Drive file: Business-Command-Center-Data.json</div><div id="bcc-save-status" style="font-size:10px;color:#A8A5B8;padding:2px 10px">Local save: ready</div></div><div class="sb-sec"><button class="nb" onclick="window.open('https://rashundah08.github.io/life-command-center/','_blank','noopener')">↗ Life Command Center</button></div></div>
+<div class="sidebar" id="sidebar"><div class="bcc-brandbar"></div><div class="sb-logo"><div class="sb-eye">Business Command Center</div><div class="sb-name">Savvy<span>.</span></div><div id="bcc-meta" style="margin-top:8px;font-size:10px;line-height:1.65;color:#A8A5B8"><div><strong style="color:#fff">BCC v4</strong></div><div id="bcc-meta-date">—</div><div id="bcc-meta-calwk">Calendar Week —</div><div id="bcc-meta-sprint">Sprint —</div><div id="bcc-meta-time">—</div></div></div><div class="sb-sec"><div class="sb-lbl">Command</div><button class="nb active" id="nav-sfscore" onclick="showPage('sfscore',this)">★ SF Scorecard</button><button class="nb" id="nav-dash" onclick="showPage('dash',this)">Dashboard</button><button class="nb" id="nav-planning" onclick="showPage('planning',this)">Planning Queue</button><button class="nb" id="nav-sprints" onclick="showPage('sprints',this)">Sprint Planner</button><button class="nb" id="nav-items" onclick="showPage('items',this)">All Action Items</button></div><div class="sb-sec"><div class="sb-lbl">Lists</div><button class="nb" onclick="bccGoListName('RLA',this)">RLA</button><button class="nb" onclick="bccGoListName('Savvy Foundations',this)">Savvy Foundations</button><button class="nb" onclick="bccGoListName('Savvy Structure',this)">Savvy Structure</button><button class="nb" id="nav-itemtags" onclick="showPage('itemtags',this)">Tags</button></div><div class="sb-sec"><div class="sb-lbl">Management</div><button class="nb" id="nav-releases" onclick="goToList('releases')">Release Management</button><button class="nb" onclick="bccGoListName('Change Management',this)">Change Management</button><button class="nb" id="nav-knowledge" onclick="showPage('knowledge',this)">Knowledge Hub</button></div><div class="sb-sec"><div class="sb-lbl">Libraries</div><button class="nb" id="nav-productcatalog" onclick="showPage('productcatalog',this)">Product Catalog</button><button class="nb" id="nav-industryprofile" onclick="showPage('industryprofile',this)">Industry Profiles</button><button class="nb" id="nav-content" onclick="showPage('content',this)">Content Planner</button><button class="nb" id="nav-fieldcatalog" onclick="showPage('fieldcatalog',this)">Field Options Catalog</button><button class="nb" id="nav-workflows" onclick="showPage('workflows',this)">Workflows</button><button class="nb" id="nav-taglibrary" onclick="showPage('taglibrary',this)">Tag Library</button></div><div class="sb-sec"><div class="sb-lbl">Data</div><button class="nb" id="save-now-btn" onclick="saveNow()">💾 Save Now</button><button class="nb" onclick="backupToFile()">↓ Save to Device</button><button class="nb" onclick="restoreFromFile()">↑ Load from Device</button><button class="nb" onclick="bccResetForRedump()">↺ Reset for Re-dump</button><button class="nb" id="drive-btn" onclick="driveSignIn()">☁️ <span id="drive-btn-label">Connect Drive</span></button><div id="drive-status" style="font-size:10px;color:#A8A5B8;padding:4px 10px;line-height:1.4">Drive file: Business-Command-Center-Data.json</div><div id="bcc-save-status" style="font-size:10px;color:#A8A5B8;padding:2px 10px">Local save: ready</div></div><div class="sb-sec"><button class="nb" onclick="window.open('https://rashundah08.github.io/life-command-center/','_blank','noopener')">↗ Life Command Center</button></div></div>
 <div class="main">
   <div class="topbar">
     <button class="ham" onclick="document.getElementById('sidebar').classList.toggle('open')"><span></span><span></span><span></span></button>
@@ -29511,7 +29511,7 @@ setTimeout(()=>{try{v369NormalizeInventory();v369EnsureFunnel();v369DecorateSF()
 <!-- USER GUIDE: v370 — Business Command Center is now a separate file. Select Business Command Center from the LCC sidebar to open the business workspace. Recent Release records v366-v370 are automatically recovered if missing, without rebuilding or overwriting older Release history. -->
 <!-- CHANGE LOG: v370 — Replaced the in-app SF Scorecard sidebar route with Business Command Center routing to business-command-center.html; added reliable post-state-load Release seeding for v366, v367, v368, v369 and v370. -->
 <!-- RELEASE NOTES: v370 — Minor structural/release-management correction. Creates the separate Business Command Center entry point and repairs missing recent Release Action Item creation. -->
-<script>(function(){window.BCC_ALLOWED_TYPES=['ask','change','clientbuild','content','industryprofile','product','phase','release','task','workflow'];window.bccGoListName=function(name,btn){const l=(S.lists||[]).find(x=>String(x.name||'').trim().toLowerCase()===String(name).trim().toLowerCase());if(l&&typeof goToList==='function'){goToList(l.id);document.querySelectorAll('.nb').forEach(x=>x.classList.remove('active'));if(btn)btn.classList.add('active')}else if(typeof toast==='function')toast(name+' list is not configured yet.')};let n=0,t=setInterval(()=>{n++;if(window.S&&typeof showPage==='function'){clearInterval(t);showPage('sfscore',document.getElementById('nav-sfscore'));document.title='Business Command Center v2'}else if(n>40)clearInterval(t)},200)})();</script><!-- USER GUIDE: BCC v1 — SF Scorecard is the Business Command Center home page. BCC navigation is limited to the approved business planning, management, library, and list pages. Master Plan and Patch Challenges are Life Command Center functions and are not part of BCC. -->
+<script>(function(){window.BCC_ALLOWED_TYPES=['ask','change','clientbuild','content','industryprofile','product','phase','release','task','workflow'];window.bccGoListName=function(name,btn){const l=(S.lists||[]).find(x=>String(x.name||'').trim().toLowerCase()===String(name).trim().toLowerCase());if(l&&typeof goToList==='function'){goToList(l.id);document.querySelectorAll('.nb').forEach(x=>x.classList.remove('active'));if(btn)btn.classList.add('active')}else if(typeof toast==='function')toast(name+' list is not configured yet.')};let n=0,t=setInterval(()=>{n++;if(window.S&&typeof showPage==='function'){clearInterval(t);showPage('sfscore',document.getElementById('nav-sfscore'));document.title='Business Command Center v4'}else if(n>40)clearInterval(t)},200)})();</script><!-- USER GUIDE: BCC v1 — SF Scorecard is the Business Command Center home page. BCC navigation is limited to the approved business planning, management, library, and list pages. Master Plan and Patch Challenges are Life Command Center functions and are not part of BCC. -->
 <!-- CHANGE LOG: BCC v1 — Established independent BCC versioning; removed the Master Plan and Patch Challenges page shells from the Business Command Center; retained the approved BCC Action Item types and navigation. -->
 <!-- RELEASE NOTES: BCC v1 — Initial Business Command Center structural release. Business content migration from LCC is intentionally deferred. --><script>
 /* BCC v1 — structural boundary guard */
@@ -29566,6 +29566,75 @@ try{recalc()}catch(_){}await saveNow();renderAll();const receipt={importedAt:new
 <!-- USER GUIDE: BCC v3 — Use Save Now, Save to Device, Load from Device and Connect Drive in the BCC sidebar. Drive saves to Business-Command-Center-Data.json. -->
 <!-- CHANGE LOG: BCC v3 — Added independent visible save controls, unique Drive file identity, Goal/placeholder migration support, three-list structure and migration receipt. -->
 <!-- RELEASE NOTES: BCC v3 — Storage/migration safety release. No automatic connection or synchronization with LCC. -->
+<script id="bcc-v4-redump-lists">
+/* BCC v4 — clean re-dump + canonical business lists */
+(function(){
+ const CANON=[
+  {id:'rla',name:'RLA',color:'#E91E8C',system:false,numbered:false,maxNum:null},
+  {id:'sf',name:'Savvy Foundations',color:'#5B2EFF',system:false,numbered:false,maxNum:null},
+  {id:'ss',name:'Savvy Structure',color:'#FF5C35',system:false,numbered:false,maxNum:null}
+ ];
+ function canonicalize(){
+  if(!window.S)return;
+  const old=Array.isArray(S.lists)?S.lists:[];
+  const release=old.find(x=>x&&x.id==='releases')||{id:'releases',name:'Releases',color:'#166534',system:true,numbered:false,maxNum:null};
+  // Only the three user-facing business Lists are retained; Releases remains hidden infrastructure for Release Management.
+  S.lists=[...CANON,release];
+  const allowed=new Set(['rla','sf','ss','releases']);
+  (S.items||[]).forEach(i=>{
+    if(!i)return;
+    i.listIds=(Array.isArray(i.listIds)?i.listIds:[]).filter(id=>allowed.has(id));
+    i.lists=(Array.isArray(i.lists)?i.lists:[]).filter(id=>allowed.has(id));
+  });
+ }
+ window.bccResetForRedump=async function(){
+  const imported=(S.items||[]).filter(i=>i&&i._bccImportedFromLCC).length;
+  const msg='Reset imported LCC migration data so you can perform a clean re-dump?\\n\\nThis removes records previously imported from LCC, but keeps BCC-native records and BCC Release history.';
+  if(!confirm(msg))return;
+  S.items=(S.items||[]).filter(i=>!i||!i._bccImportedFromLCC);
+  canonicalize();
+  try{recalc()}catch(_){}
+  await saveNow();
+  try{renderAll()}catch(_){}
+  if(typeof toast==='function')toast('Reset complete: '+imported+' imported LCC records removed. Ready for a clean re-dump.',5000);
+ };
+ // Wrap importer so every accepted migration record is marked as imported from LCC.
+ const wait=setInterval(function(){
+  if(typeof window.importBusinessItemsFromLCC!=='function'||!window.S)return;
+  clearInterval(wait);
+  const base=window.importBusinessItemsFromLCC;
+  window.importBusinessItemsFromLCC=function(inp){
+   const before=new Set((S.items||[]).map(i=>i&&i.id));
+   const file=inp&&inp.files&&inp.files[0];
+   if(!file)return base.apply(this,arguments);
+   const rr=new FileReader();
+   rr.onload=function(ev){
+    let ids=[];try{const p=JSON.parse(ev.target.result);ids=(p.items||[]).map(x=>x&&x.id).filter(Boolean)}catch(_){}
+    base.call(window,inp);
+    setTimeout(async function(){
+      const idset=new Set(ids);
+      (S.items||[]).forEach(i=>{if(i&&idset.has(i.id)){i._bccImportedFromLCC=true;i._bccImportedAt=new Date().toISOString()}});
+      canonicalize();
+      await saveNow();
+      try{renderAll()}catch(_){}
+    },1200);
+   };
+   rr.readAsText(file);
+  };
+  canonicalize();
+  try{save()}catch(_){}
+ },150);
+ // v4 release
+ function seed(){
+  if(!window.S||!Array.isArray(S.items)||typeof makeItem!=='function')return false;
+  if(S.items.some(x=>x&&x.type==='release'&&String(x.releaseVersion||'').replace(/^v/i,'')==='4'))return true;
+  const x=makeItem({name:'v4 — Re-dump Reset & Canonical Lists',type:'release',status:'inprogress',planningStage:'ready',listIds:['releases'],lists:['releases'],startDate:'2026-08-25',releaseVersion:'4',releaseType:'minor',releaseStatus:'testing',testResult:'testing',releaseModules:['Import','Lists','Data Safety'],releaseChangelog:'Added Reset for Re-dump to remove previously imported LCC migration records while preserving BCC-native data and BCC release history. Canonicalized user-facing BCC Lists to RLA, Savvy Foundations, and Savvy Structure.',releaseNotes:'Imported LCC records are now marked so future re-dumps can be reset cleanly. Releases remains hidden infrastructure for Release Management and is not a user-facing business List.',releaseSummary:'Safe migration reset and corrected BCC Lists.',releaseUserGuide:'Before a replacement LCC import, click Reset for Re-dump, confirm the reset, then import the new LCC JSON. Save Now and verify after import.',releaseTechnicalNotes:'Migration records receive _bccImportedFromLCC and _bccImportedAt metadata. Reset removes only marked imported records. Canonical business list IDs are rla, sf and ss.',updatedAt:Date.now()});x.listNums=x.listNums||{};x.listNums.releases=4;x.seqNum='4';S.items.push(x);try{save()}catch(_){}return true}
+ let n=0,t=setInterval(()=>{if(seed()||++n>40)clearInterval(t)},250);
+})();
+</script>
+<!-- USER GUIDE: BCC v4 — Use Reset for Re-dump before replacing a prior LCC migration. It removes LCC-imported records while preserving BCC-native records and BCC Release history. User-facing Lists are RLA, Savvy Foundations and Savvy Structure. -->
+<!-- CHANGE LOG: BCC v4 — Added clean re-dump reset, migration-origin markers, and canonical three-list enforcement. -->
+<!-- RELEASE NOTES: BCC v4 — Migration safety refinement. Release infrastructure remains available without appearing as a fourth business List. -->
 </body>
 </html>
 
