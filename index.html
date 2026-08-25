@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Business Command Center v371</title>
+<title>Business Command Center v1</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" defer></script>
@@ -1338,215 +1338,6 @@ html,body{height:100%;background:var(--bg);color:var(--txt);font-family:'DM Sans
     </div>
   
     <!-- MASTER PLAN HUB -->
-    <div id="pg-hub" style="display:none">
-      <div class="hq-master-hero" style="background:linear-gradient(135deg,#4C1D95 0%,#6D28D9 52%,#9333EA 100%);border-radius:var(--rxl);padding:28px 32px 24px;margin-bottom:24px;color:#fff;position:relative;overflow:hidden">
-        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(255,255,255,.12) 0%,transparent 60%);pointer-events:none"></div>
-        <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;opacity:.7;margin-bottom:8px">Your Personal Command Center</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;font-style:italic;margin-bottom:4px">The Master Plan</div>
-        <div style="font-size:13px;opacity:.75;margin-bottom:20px;font-style:italic">Everything in one place. One beautiful, intentional life.</div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
-          <div style="background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:700">🧠 LCC v370</div>
-          <div style="background:rgba(255,255,255,.18);border-radius:20px;padding:5px 14px;font-size:12px">&#128197; <span id="hub-date">--</span></div>
-          <div style="background:rgba(255,255,255,.18);border-radius:20px;padding:5px 14px;font-size:12px">&#127807; Rotation Week <strong id="hub-rot">--</strong> of 13</div>
-          <div style="background:rgba(255,255,255,.18);border-radius:20px;padding:5px 14px;font-size:12px">&#128336; Calendar Week <strong id="hub-calwk">--</strong> of 53</div>
-          <div style="background:rgba(255,255,255,.18);border-radius:20px;padding:5px 14px;font-size:12px">&#9889; Sprint <strong id="hub-sprint">--</strong></div>
-          <div style="background:rgba(255,255,255,.18);border-radius:20px;padding:5px 14px;font-size:12px">&#9201; <span id="hub-time">--</span> CT</div>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-          <div style="background:rgba(255,255,255,.12);border-radius:var(--rl);padding:16px">
-            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;opacity:.7;margin-bottom:6px">&#127891; RAVYN'S SENIOR YEAR</div>
-            <div style="display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap"><div><div style="font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:600;line-height:1" id="hub-ravyn-days">--</div><div style="font-size:12px;opacity:.75;margin-top:4px">days until Senior Year target · May 31, 2027</div></div><div style="margin-left:auto;text-align:right"><div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;line-height:1" id="hub-ravyn-pct-hero">--%</div><div style="font-size:10px;opacity:.7;margin-top:4px" id="hub-ravyn-progress-hero">0 / 0 items complete</div></div></div>
-            <div style="height:3px;background:rgba(255,255,255,.2);border-radius:2px;margin-top:10px;overflow:hidden"><div id="hub-ravyn-bar-hero" style="height:100%;background:#fff;border-radius:2px;width:0%"></div></div>
-          </div>
-          <div style="background:rgba(255,255,255,.12);border-radius:var(--rl);padding:16px">
-            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;opacity:.7;margin-bottom:6px">&#127881; 1000 DAYS CHALLENGE</div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:600;line-height:1" id="hub-days-done">--</div>
-            <div style="font-size:12px;opacity:.75;margin-top:4px">of 1000 days &bull; <span id="hub-days-left">--</span> remaining</div>
-            <div style="height:3px;background:rgba(255,255,255,.2);border-radius:2px;margin-top:10px;overflow:hidden"><div id="hub-days-bar" style="height:100%;background:#fff;border-radius:2px"></div></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- v301 — Master Plan time lenses -->
-      <div class="mp-lens-wrap">
-        <div class="mp-lens-pills" id="mp-lens-pills">
-          <button class="mp-lens-pill active" data-period="today" onclick="setHubPeriod('today',this)">Today</button>
-          <button class="mp-lens-pill" data-period="week" onclick="setHubPeriod('week',this)">This Week</button>
-          <button class="mp-lens-pill" data-period="sprint" onclick="setHubPeriod('sprint',this)">Sprint</button>
-          <button class="mp-lens-pill" data-period="month" onclick="setHubPeriod('month',this)">Month</button>
-          <button class="mp-lens-pill" data-period="quarter" onclick="setHubPeriod('quarter',this)">Quarter</button>
-        </div>
-        <div class="mp-lens-metrics" id="mp-lens-metrics"></div>
-      </div>
-      <div id="mp-period-view" class="mp-lens-period" style="display:none"></div>
-
-      <!-- 0208 (v223): Master Plan calendar + Google Calendar sync removed. Events now surface in Today\u2019s Focus and Active Now. -->
-
-      <!-- TODAY'S FOCUS -->
-      <div id="mp-today-focus-section" style="margin-bottom:24px">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
-          <div onclick="toggleHubTodayFocus()" style="display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none">
-            <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--txt2)">Today's Focus</div>
-            <span id="hub-focus-arrow" style="font-size:11px;color:var(--txt2)">▲</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:8px">
-            <div id="hub-focus-counts" style="font-size:11px;color:var(--txt2)"></div>
-            <button class="btn xs ghost" onclick="printTodaysFocus()" title="Print Today's Focus as a daily action plan">🖨️ Print</button>
-            <button class="btn xs ghost" onclick="printFutureDays()" title="Print a multi-day forward plan (choose how many days)">🗓️ Print Days</button>
-          </div>
-        </div>
-        <div id="hub-focus-body">
-        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px">
-          <span style="font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--txt2)">📋 Copy to Google Keep</span>
-          <button class="btn xs primary" onclick="copyKeepDueToday()">Due Today</button>
-          <button class="btn xs" onclick="copyKeepPastDue()">Past Due</button>
-        </div>
-        <div id="hub-focus" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-          <div style="color:var(--txt3);font-size:12px;padding:12px">Loading...</div>
-        </div>
-        </div>
-      </div>
-
-      <!-- HABITS — TODAY & PAST DUE (v236) -->
-      <div id="mp-today-habits-section" style="margin-bottom:24px">
-        <div onclick="toggleHubHabitsDue()" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;cursor:pointer;user-select:none">
-          <div style="display:flex;align-items:center;gap:6px">
-            <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--txt2)">🔁 Today's Routines &amp; Habit Attention</div>
-            <span id="hub-habits-due-arrow" style="font-size:11px;color:var(--txt2)">▲</span>
-          </div>
-          <div id="hub-habits-due-counts" style="font-size:11px;color:var(--txt2)"></div>
-        </div>
-        <div id="hub-habits-due" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-          <div style="color:var(--txt3);font-size:12px;padding:12px">Loading...</div>
-        </div>
-      </div>
-
-      <!-- ACTIVE NOW -->
-      <div id="mp-active-now-section" style="margin-bottom:24px">
-        <div onclick="toggleHubActiveNow()" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;cursor:pointer;user-select:none;gap:8px;flex-wrap:wrap">
-          <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--txt2)">🔥 Active Now</div>
-          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap" onclick="event.stopPropagation()">
-            <select id="hub-active-type-filter" onchange="hubActiveNowType=this.value;renderHubActiveNow(document.getElementById.bind(document))" style="font-size:10px;padding:3px 7px;border:1px solid var(--bdr2);border-radius:12px;background:var(--card);color:var(--txt2);font-family:'DM Sans',sans-serif;outline:none" title="Filter Active Now by action-item type">
-              <option value="">All Types</option>
-            </select>
-            <div id="hub-active-now-counts" style="font-size:11px;color:var(--txt2)"></div>
-            <span id="hub-active-now-arrow" onclick="event.stopPropagation();toggleHubActiveNow()" style="color:var(--txt2);font-size:12px;cursor:pointer">▲</span>
-          </div>
-        </div>
-        <div id="hub-active-now" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-          <div style="color:var(--txt3);font-size:12px;padding:12px">Loading...</div>
-        </div>
-      </div>
-
-      <!-- CURRENT SPRINT WIDGET -->
-      <div id="mp-sprint-section" style="background:linear-gradient(135deg,#EEF4FF,#E8F0FB);border:1.5px solid #185FA5;border-radius:var(--rl);padding:16px 18px;margin-bottom:20px;box-shadow:var(--sh)">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px">
-          <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#185FA5">⚡ Current Sprint</div>
-          <button onclick="showPage('sprints',document.getElementById('nav-sprints'))" style="font-size:10px;padding:2px 7px;border-radius:6px;border:1px solid #185FA5;background:transparent;color:#185FA5;cursor:pointer;font-family:'DM Sans',sans-serif">View All Sprints ↗</button>
-        </div>
-        <div id="hub-sprint-widget"></div>
-      </div>
-
-      <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--txt2);margin-bottom:12px">Big Life Goals</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px">
-        <div style="background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);padding:18px;box-shadow:var(--sh);cursor:pointer" onclick="openInitiativeDashboardV298('101g',document.getElementById('nav-init-101g'))">
-          <div style="font-size:22px;margin-bottom:8px">&#127846;</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:3px">101 in 1000 Days</div>
-          <div style="font-size:12px;color:var(--txt2);margin-bottom:12px;font-style:italic">Your big bucket list</div>
-          <div style="height:4px;background:var(--soft);border-radius:2px;overflow:hidden;margin-bottom:8px"><div id="hub-101-bar" style="height:100%;width:0%;background:#185FA5;border-radius:2px"></div></div>
-          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--txt2);margin-bottom:12px"><span><strong id="hub-101-done">0</strong> done</span><span><strong id="hub-101-left">101</strong> to go</span></div>
-          <button class="btn sm" style="width:100%;justify-content:center;border-color:#185FA5;color:#185FA5">View my goals &#8599;</button>
-        </div>
-        <div style="background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);padding:18px;box-shadow:var(--sh);cursor:pointer" onclick="openInitiativeDashboardV298('50b50',document.getElementById('nav-init-50b50'))">
-          <div style="font-size:22px;margin-bottom:8px">&#127874;</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:3px">50 Before 50</div>
-          <div style="font-size:12px;color:var(--txt2);margin-bottom:12px;font-style:italic">Milestone adventures before the big birthday</div>
-          <div style="height:4px;background:var(--soft);border-radius:2px;overflow:hidden;margin-bottom:8px"><div id="hub-50-bar" style="height:100%;width:0%;background:#F63E73;border-radius:2px"></div></div>
-          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--txt2);margin-bottom:12px"><span><strong id="hub-50-done">0</strong> done</span><span><strong id="hub-50-left">50</strong> to go</span></div>
-          <button class="btn sm" style="width:100%;justify-content:center;border-color:#F63E73;color:#F63E73">View my list &#8599;</button>
-        </div>
-      </div>
-      <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--txt2);margin-bottom:12px">Special Chapters</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;padding-bottom:24px">
-        <div style="background:linear-gradient(135deg,#F5F0FF,#EDE7FF);border:1px solid #D4BFFF;border-radius:var(--rl);padding:18px;box-shadow:var(--sh)">
-          <div style="font-size:22px;margin-bottom:6px">&#127891;</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#4A1D96;margin-bottom:3px">Ravyn's Senior Year</div>
-          <div style="font-size:12px;color:#6D28D9;margin-bottom:14px;font-style:italic">Capturing every milestone of her final year</div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px">
-            <div style="text-align:center;background:rgba(255,255,255,.6);border-radius:var(--r);padding:10px"><div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#4A1D96" id="hub-ravyn-days-card">--</div><div style="font-size:10px;color:#6D28D9">days left</div></div>
-            <div style="text-align:center;background:rgba(255,255,255,.6);border-radius:var(--r);padding:10px"><div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#4A1D96" id="hub-ravyn-complete">--</div><div style="font-size:10px;color:#6D28D9">items complete</div></div>
-            <div style="text-align:center;background:rgba(255,255,255,.6);border-radius:var(--r);padding:10px"><div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#4A1D96" id="hub-ravyn-pct">--%</div><div style="font-size:10px;color:#6D28D9">journey complete</div></div>
-          </div>
-          <div style="height:4px;background:rgba(255,255,255,.65);border-radius:2px;overflow:hidden;margin-bottom:14px"><div id="hub-ravyn-bar" style="height:100%;width:0%;background:#7C3AED;border-radius:2px"></div></div>
-          <button class="btn sm" style="width:100%;justify-content:center;background:#7C3AED;color:#fff;border-color:#7C3AED" onclick="openInitiativeDashboardV298('ravyn',document.getElementById('nav-init-ravyn'))">Track her year &#8599;</button>
-        </div>
-        <div style="background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);padding:18px;box-shadow:var(--sh)">
-          <div style="font-size:22px;margin-bottom:6px">&#129330;</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:3px">1000 NOs Challenge</div>
-          <div style="font-size:12px;color:var(--txt2);margin-bottom:14px;font-style:italic">Collecting rejections on the road to yes</div>
-          <div style="height:4px;background:var(--soft);border-radius:2px;overflow:hidden;margin-bottom:10px"><div id="hub-nos-bar" style="height:100%;width:0%;background:#EF9F27;border-radius:2px"></div></div>
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px">
-            <div style="text-align:center;background:var(--soft);border-radius:var(--r);padding:8px"><div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--navy)" id="hub-nos-total">0</div><div style="font-size:10px;color:var(--txt2)">total</div></div>
-            <div style="text-align:center;background:#FFF3CD;border-radius:var(--r);padding:8px"><div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#856404" id="hub-nos-pending">0</div><div style="font-size:10px;color:#856404">pending</div></div>
-            <div style="text-align:center;background:#E1F5EE;border-radius:var(--r);padding:8px"><div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#0A5E47" id="hub-nos-yes">0</div><div style="font-size:10px;color:#0A5E47">yes</div></div>
-            <div style="text-align:center;background:#FCEBEB;border-radius:var(--r);padding:8px"><div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#8B1A1A" id="hub-nos-no">0</div><div style="font-size:10px;color:#8B1A1A">no</div></div>
-          </div>
-          <div style="font-size:11px;color:var(--txt2);text-align:center;margin-bottom:12px"><span id="hub-nos-pct">0% (no responses yet)</span> &bull; <strong id="hub-nos-left">1000</strong> NOs to go</div>
-          <div style="display:flex;gap:8px">
-            <button class="btn sm primary" style="flex:1;justify-content:center" onclick="logAsk()">&#128221; Log an Ask</button>
-            <button class="btn sm" style="flex:1;justify-content:center" onclick="goToList('nos')">View all &#8599;</button>
-          </div>
-        </div>
-        
-      </div>
-      <!-- MONTHLY TRACKING (0093) -->
-      <div style="margin-top:8px;padding-bottom:20px;border-top:1px solid var(--bdr);padding-top:18px">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
-          <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--txt2)">📅 Monthly Tracking <span style="font-size:9px;font-weight:400;text-transform:none;letter-spacing:0;color:var(--txt3)">— goals &amp; projects by start month</span></div>
-          <div style="display:flex;gap:6px;align-items:center">
-            <span id="hub-monthly-count" style="font-size:11px;color:var(--txt2)"></span>
-          </div>
-        </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px;padding:8px 10px;background:var(--soft);border-radius:var(--r)">
-          <div style="display:flex;gap:5px">
-            <button class="hub-gf hub-mf-type active" onclick="toggleHubMonthlyType('goal',this)">🎯 Goal</button>
-            <button class="hub-gf hub-mf-type active" onclick="toggleHubMonthlyType('project',this)">📁 Project</button>
-          </div>
-          <div style="display:flex;gap:5px;align-items:center;font-size:11px;color:var(--txt2)">Start:
-            <input type="date" id="hub-monthly-start-from" onchange="onHubMonthlyFilterChg()" style="padding:4px 6px;border:1px solid var(--bdr2);border-radius:var(--r);font-size:11px;font-family:'DM Sans',sans-serif">–
-            <input type="date" id="hub-monthly-start-to" onchange="onHubMonthlyFilterChg()" style="padding:4px 6px;border:1px solid var(--bdr2);border-radius:var(--r);font-size:11px;font-family:'DM Sans',sans-serif">
-          </div>
-          <div style="display:flex;gap:5px;align-items:center;font-size:11px;color:var(--txt2)">TCD:
-            <input type="date" id="hub-monthly-tcd-from" onchange="onHubMonthlyFilterChg()" style="padding:4px 6px;border:1px solid var(--bdr2);border-radius:var(--r);font-size:11px;font-family:'DM Sans',sans-serif">–
-            <input type="date" id="hub-monthly-tcd-to" onchange="onHubMonthlyFilterChg()" style="padding:4px 6px;border:1px solid var(--bdr2);border-radius:var(--r);font-size:11px;font-family:'DM Sans',sans-serif">
-          </div>
-          <button class="btn xs ghost" onclick="clearHubMonthlyFilters()">Clear</button>
-        </div>
-        <div id="hub-monthly"></div>
-      </div>
-      <!-- ALL GOALS -->
-      <div style="margin-top:8px;padding-bottom:24px">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
-          <div style="font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--txt2)">All Goals</div>
-          <div style="display:flex;gap:6px;align-items:center">
-            <button class="btn xs ghost" onclick="printMasterPlan()" title="Print Master Plan">🖨️ Print</button>
-            <span id="hub-goals-count" style="font-size:11px;color:var(--txt2)"></span>
-            <button class="btn xs" onclick="openModal(null,null,'goal')">+ New Goal</button>
-          </div>
-        </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px" id="hub-goals-filter">
-          <button class="hub-gf active" onclick="setHubGoalFilter('all',this)">All</button>
-          <button class="hub-gf" onclick="setHubGoalFilter('notstarted',this)">Not Started</button>
-          <button class="hub-gf" onclick="setHubGoalFilter('inprogress',this)">In Progress</button>
-          <button class="hub-gf" onclick="setHubGoalFilter('planned',this)">Planned</button>
-          <button class="hub-gf" onclick="setHubGoalFilter('behind',this)">Behind</button>
-          <button class="hub-gf" onclick="setHubGoalFilter('done',this)">Done</button>
-        </div>
-        <div id="hub-goals"></div>
-      </div>
-    </div>
-
-    <!-- WHO I AM BECOMING PAGE -->
     <div id="pg-wiab" style="display:none">
       <div style="background:linear-gradient(135deg,#C4773B,#8B4A1E);border-radius:var(--rxl);padding:24px 28px 20px;margin-bottom:20px;color:#fff;position:relative;overflow:hidden">
         <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 20%,rgba(255,255,255,.1) 0%,transparent 60%);pointer-events:none"></div>
@@ -1783,36 +1574,6 @@ html,body{height:100%;background:var(--bg);color:var(--txt);font-family:'DM Sans
     </div>
 
     <!-- PATCH CHALLENGES PAGE -->
-    <div id="pg-patches" style="display:none">
-      <div style="background:linear-gradient(135deg,#8b1a4a 0%,#4a0e2a 60%,#1a0510 100%);border-radius:var(--rxl);padding:28px 32px 24px;margin-bottom:20px;color:#fff;position:relative;overflow:hidden">
-        <div style="position:absolute;inset:0;opacity:.05;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:20px 20px;pointer-events:none"></div>
-        <div style="position:relative">
-          <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;opacity:.6;margin-bottom:6px">My Challenges</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;font-style:italic;margin-bottom:4px">Patch Challenge Tracker</div>
-          <div style="font-size:13px;opacity:.7;margin-bottom:18px;font-style:italic">Adult-edition merit badges · earn them all</div>
-          <div style="max-width:440px">
-            <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px;color:#d4a853;font-weight:600">
-              <span id="pt-earned-label">🏅 0 of 0 logged</span>
-              <span id="pt-pct-label">0%</span>
-            </div>
-            <div style="background:rgba(255,255,255,.15);border-radius:999px;height:13px;overflow:hidden">
-              <div id="pt-progress-bar" style="background:linear-gradient(90deg,#d4a853,#f0c96e);height:100%;border-radius:999px;width:0%;transition:width .5s ease;box-shadow:0 0 12px rgba(212,168,83,.6)"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Search + filters + add button -->
-      <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap">
-        <div class="srch" style="flex:1;min-width:200px"><span class="srch-ic">&#9906;</span><input type="text" id="pt-search" placeholder="Search patches or challenges..." oninput="renderPatchPage()" style="width:100%"></div>
-        <button class="btn sm" style="background:#8b1a4a;color:#fff;border-color:#8b1a4a;flex-shrink:0" onclick="openPatchModal()">+ Add Patch</button>
-        <button class="btn sm" style="flex-shrink:0" onclick="goToList('patches')">View List &#8599;</button>
-      </div>
-      <div class="fbar" id="pt-catbar"></div>
-      <div style="font-size:11px;color:var(--txt3);margin-bottom:12px" id="pt-count"></div>
-      <div id="pt-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px;margin-bottom:32px"></div>
-    </div>
-
-    <!-- HEALTH & WELLNESS PAGE — v286 -->
     <div id="pg-health" style="display:none">
       <div style="background:linear-gradient(135deg,#14532D 0%,#0F766E 55%,#164E63 100%);border-radius:var(--rxl);padding:28px 32px 24px;margin-bottom:20px;color:#fff">
         <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;opacity:.65;margin-bottom:6px">Personal Health Operations</div>
@@ -29752,7 +29513,27 @@ setTimeout(()=>{try{v369NormalizeInventory();v369EnsureFunnel();v369DecorateSF()
 <!-- USER GUIDE: v370 — Business Command Center is now a separate file. Select Business Command Center from the LCC sidebar to open the business workspace. Recent Release records v366-v370 are automatically recovered if missing, without rebuilding or overwriting older Release history. -->
 <!-- CHANGE LOG: v370 — Replaced the in-app SF Scorecard sidebar route with Business Command Center routing to business-command-center.html; added reliable post-state-load Release seeding for v366, v367, v368, v369 and v370. -->
 <!-- RELEASE NOTES: v370 — Minor structural/release-management correction. Creates the separate Business Command Center entry point and repairs missing recent Release Action Item creation. -->
-<script>(function(){window.BCC_ALLOWED_TYPES=['ask','change','clientbuild','content','industryprofile','product','phase','release','task','workflow'];window.bccGoListName=function(name,btn){const l=(S.lists||[]).find(x=>String(x.name||'').trim().toLowerCase()===String(name).trim().toLowerCase());if(l&&typeof goToList==='function'){goToList(l.id);document.querySelectorAll('.nb').forEach(x=>x.classList.remove('active'));if(btn)btn.classList.add('active')}else if(typeof toast==='function')toast(name+' list is not configured yet.')};let n=0,t=setInterval(()=>{n++;if(window.S&&typeof showPage==='function'){clearInterval(t);showPage('sfscore',document.getElementById('nav-sfscore'));document.title='Business Command Center v371'}else if(n>40)clearInterval(t)},200)})();</script><!-- USER GUIDE: v371 — SF Scorecard is the BCC home page; approved business pages and Action Item types are exposed. --><!-- CHANGE LOG: v371 — Applied Savvy Foundations brand palette and rebuilt BCC navigation/type selectors. --><!-- RELEASE NOTES: v371 — Structure only; business content migration deferred. --></body>
+<script>(function(){window.BCC_ALLOWED_TYPES=['ask','change','clientbuild','content','industryprofile','product','phase','release','task','workflow'];window.bccGoListName=function(name,btn){const l=(S.lists||[]).find(x=>String(x.name||'').trim().toLowerCase()===String(name).trim().toLowerCase());if(l&&typeof goToList==='function'){goToList(l.id);document.querySelectorAll('.nb').forEach(x=>x.classList.remove('active'));if(btn)btn.classList.add('active')}else if(typeof toast==='function')toast(name+' list is not configured yet.')};let n=0,t=setInterval(()=>{n++;if(window.S&&typeof showPage==='function'){clearInterval(t);showPage('sfscore',document.getElementById('nav-sfscore'));document.title='Business Command Center v1'}else if(n>40)clearInterval(t)},200)})();</script><!-- USER GUIDE: BCC v1 — SF Scorecard is the Business Command Center home page. BCC navigation is limited to the approved business planning, management, library, and list pages. Master Plan and Patch Challenges are Life Command Center functions and are not part of BCC. -->
+<!-- CHANGE LOG: BCC v1 — Established independent BCC versioning; removed the Master Plan and Patch Challenges page shells from the Business Command Center; retained the approved BCC Action Item types and navigation. -->
+<!-- RELEASE NOTES: BCC v1 — Initial Business Command Center structural release. Business content migration from LCC is intentionally deferred. --><script>
+/* BCC v1 — structural boundary guard */
+(function(){
+ const blocked=new Set(['hub','patches']);
+ const boot=setInterval(()=>{
+   if(typeof window.showPage!=='function')return;
+   clearInterval(boot);
+   const base=window.showPage;
+   window.showPage=function(page){
+     if(blocked.has(String(page||''))){
+       if(typeof toast==='function')toast('This page belongs to the Life Command Center.');
+       return base.call(this,'sfscore',document.getElementById('nav-sfscore'));
+     }
+     return base.apply(this,arguments);
+   };
+ },100);
+})();
+</script>
+</body>
 </html>
 
 <!-- USER GUIDE: v364 — Knowledge Category is now Topic. Topic is selected from: Astrology, Health, Senior Year, Home, Finance, Business, Content, Travel, Style & Beauty, or Recipes. Source is a controlled dropdown for where the knowledge came from, including TikTok, Book, Website, YouTube, Personal Experience, Podcast, Course/Class, Social Media, Article, and Other. Use Source Link / Reference for the URL, book title/page, creator, episode, or other citation detail. -->
