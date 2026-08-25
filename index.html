@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Business Command Center v2</title>
+<title>Business Command Center v5</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" defer></script>
@@ -924,7 +924,7 @@ html,body{height:100%;background:var(--bg);color:var(--txt);font-family:'DM Sans
 <style id='business-cc-shell'>:root{--bcc-violet:#5B2EFF;--bcc-coral:#FF5C35;--bcc-magenta:#E91E8C;--bcc-amber:#F5A623;--bcc-ink:#0D0D12;--bcc-surface:#F8F8FC}.sidebar{background:linear-gradient(180deg,#0D0D12,#171027)!important}.sb-eye{color:#A8A5B8!important}.sb-name{color:#fff!important;font-family:'DM Sans',sans-serif!important;font-weight:800!important}.sb-name span{color:#FF5C35!important}.nb{color:#D8D5E3!important}.nb.active{background:linear-gradient(90deg,#5B2EFF,#E91E8C)!important;color:#fff!important}.nb:hover{background:rgba(91,46,255,.2)!important;color:#fff!important}.content{background:#F8F8FC!important}.bcc-brandbar{height:4px;background:linear-gradient(90deg,#5B2EFF,#E91E8C,#FF5C35,#F5A623)}</style></head>
 <body>
 <div class="app">
-<div class="sidebar" id="sidebar"><div class="bcc-brandbar"></div><div class="sb-logo"><div class="sb-eye">Business Command Center</div><div class="sb-name">Savvy<span>.</span></div><div id="bcc-meta" style="margin-top:8px;font-size:10px;line-height:1.65;color:#A8A5B8"><div><strong style="color:#fff">BCC v4</strong></div><div id="bcc-meta-date">—</div><div id="bcc-meta-calwk">Calendar Week —</div><div id="bcc-meta-sprint">Sprint —</div><div id="bcc-meta-time">—</div></div></div><div class="sb-sec"><div class="sb-lbl">Command</div><button class="nb active" id="nav-sfscore" onclick="showPage('sfscore',this)">★ SF Scorecard</button><button class="nb" id="nav-dash" onclick="showPage('dash',this)">Dashboard</button><button class="nb" id="nav-planning" onclick="showPage('planning',this)">Planning Queue</button><button class="nb" id="nav-sprints" onclick="showPage('sprints',this)">Sprint Planner</button><button class="nb" id="nav-items" onclick="showPage('items',this)">All Action Items</button></div><div class="sb-sec"><div class="sb-lbl">Lists</div><button class="nb" onclick="bccGoListName('RLA',this)">RLA</button><button class="nb" onclick="bccGoListName('Savvy Foundations',this)">Savvy Foundations</button><button class="nb" onclick="bccGoListName('Savvy Structure',this)">Savvy Structure</button><button class="nb" id="nav-itemtags" onclick="showPage('itemtags',this)">Tags</button></div><div class="sb-sec"><div class="sb-lbl">Management</div><button class="nb" id="nav-releases" onclick="goToList('releases')">Release Management</button><button class="nb" onclick="bccGoListName('Change Management',this)">Change Management</button><button class="nb" id="nav-knowledge" onclick="showPage('knowledge',this)">Knowledge Hub</button></div><div class="sb-sec"><div class="sb-lbl">Libraries</div><button class="nb" id="nav-productcatalog" onclick="showPage('productcatalog',this)">Product Catalog</button><button class="nb" id="nav-industryprofile" onclick="showPage('industryprofile',this)">Industry Profiles</button><button class="nb" id="nav-content" onclick="showPage('content',this)">Content Planner</button><button class="nb" id="nav-fieldcatalog" onclick="showPage('fieldcatalog',this)">Field Options Catalog</button><button class="nb" id="nav-workflows" onclick="showPage('workflows',this)">Workflows</button><button class="nb" id="nav-taglibrary" onclick="showPage('taglibrary',this)">Tag Library</button></div><div class="sb-sec"><div class="sb-lbl">Data</div><button class="nb" id="save-now-btn" onclick="saveNow()">💾 Save Now</button><button class="nb" onclick="backupToFile()">↓ Save to Device</button><button class="nb" onclick="restoreFromFile()">↑ Load from Device</button><button class="nb" onclick="bccResetForRedump()">↺ Reset for Re-dump</button><button class="nb" id="drive-btn" onclick="driveSignIn()">☁️ <span id="drive-btn-label">Connect Drive</span></button><div id="drive-status" style="font-size:10px;color:#A8A5B8;padding:4px 10px;line-height:1.4">Drive file: Business-Command-Center-Data.json</div><div id="bcc-save-status" style="font-size:10px;color:#A8A5B8;padding:2px 10px">Local save: ready</div></div><div class="sb-sec"><button class="nb" onclick="window.open('https://rashundah08.github.io/life-command-center/','_blank','noopener')">↗ Life Command Center</button></div></div>
+<div class="sidebar" id="sidebar"><div class="bcc-brandbar"></div><div class="sb-logo"><div class="sb-eye">Business Command Center</div><div class="sb-name">Savvy<span>.</span></div><div id="bcc-meta" style="margin-top:8px;font-size:10px;line-height:1.65;color:#A8A5B8"><div><strong style="color:#fff">BCC v5</strong></div><div id="bcc-meta-date">—</div><div id="bcc-meta-calwk">Calendar Week —</div><div id="bcc-meta-sprint">Sprint —</div><div id="bcc-meta-time">—</div></div></div><div class="sb-sec"><div class="sb-lbl">Command</div><button class="nb active" id="nav-sfscore" onclick="showPage('sfscore',this)">★ SF Scorecard</button><button class="nb" id="nav-dash" onclick="showPage('dash',this)">Dashboard</button><button class="nb" id="nav-planning" onclick="showPage('planning',this)">Planning Queue</button><button class="nb" id="nav-sprints" onclick="showPage('sprints',this)">Sprint Planner</button><button class="nb" id="nav-items" onclick="showPage('items',this)">All Action Items</button></div><div class="sb-sec"><div class="sb-lbl">Lists</div><button class="nb" onclick="bccGoListName('RLA',this)">RLA</button><button class="nb" onclick="bccGoListName('Savvy Foundations',this)">Savvy Foundations</button><button class="nb" onclick="bccGoListName('Savvy Structure',this)">Savvy Structure</button><button class="nb" id="nav-itemtags" onclick="showPage('itemtags',this)">Tags</button></div><div class="sb-sec"><div class="sb-lbl">Management</div><button class="nb" id="nav-releases" onclick="goToList('releases')">Release Management</button><button class="nb" onclick="bccGoListName('Change Management',this)">Change Management</button><button class="nb" id="nav-knowledge" onclick="showPage('knowledge',this)">Knowledge Hub</button></div><div class="sb-sec"><div class="sb-lbl">Libraries</div><button class="nb" id="nav-productcatalog" onclick="showPage('productcatalog',this)">Product Catalog</button><button class="nb" id="nav-industryprofile" onclick="showPage('industryprofile',this)">Industry Profiles</button><button class="nb" id="nav-content" onclick="showPage('content',this)">Content Planner</button><button class="nb" id="nav-fieldcatalog" onclick="showPage('fieldcatalog',this)">Field Options Catalog</button><button class="nb" id="nav-workflows" onclick="showPage('workflows',this)">Workflows</button><button class="nb" id="nav-taglibrary" onclick="showPage('taglibrary',this)">Tag Library</button></div><div class="sb-sec"><div class="sb-lbl">Data</div><button class="nb" id="save-now-btn" onclick="saveNow()">💾 Save Now</button><button class="nb" onclick="backupToFile()">↓ Save to Device</button><button class="nb" onclick="restoreFromFile()">↑ Load from Device</button><button class="nb" onclick="bccResetForRedump()">↺ Reset for Re-dump</button><button class="nb" id="drive-btn" onclick="driveSignIn()">☁️ <span id="drive-btn-label">Connect Drive</span></button><div id="drive-status" style="font-size:10px;color:#A8A5B8;padding:4px 10px;line-height:1.4">Drive file: Business-Command-Center-Data.json</div><div id="bcc-save-status" style="font-size:10px;color:#A8A5B8;padding:2px 10px">Local save: ready</div></div><div class="sb-sec"><button class="nb" onclick="window.open('https://rashundah08.github.io/life-command-center/','_blank','noopener')">↗ Life Command Center</button></div></div>
 <div class="main">
   <div class="topbar">
     <button class="ham" onclick="document.getElementById('sidebar').classList.toggle('open')"><span></span><span></span><span></span></button>
@@ -5593,7 +5593,7 @@ function _pcOpen(id,txt){return`<button class="btn xs" onclick="event.stopPropag
 // Blank clears to null (not 0) so the field re-reports as missing rather than reading as set.
 function _pcNum(id,field,cur,ph,w){return`<input type="number" min="0" onclick="event.stopPropagation()" value="${cur??''}" placeholder="${esc(ph||'')}" style="font-size:11px;padding:3px 6px;width:${w||60}px" onchange="parkingFixField('${id}','${field}',this.value===''?null:Number(this.value))">`;}
 const PARKING_SECTION_DEFS=[
-  {key:'list',mf:'List',label:'📥 Needs Initiative',sub:'No initiative/list assigned yet',color:'#B91C1C',control:i=>`<select class="tbl-sel" onclick="event.stopPropagation()" onchange="parkingFixInitiative('${i.id}',this.value)"><option value="">— pick a list —</option>${S.lists.filter(l=>l.id!==parkingListId()).map(l=>`<option value="${l.id}">${esc(l.name)}</option>`).join('')}</select>`},
+  {key:'list',mf:'List',label:'📥 Needs Initiative',sub:'No initiative/list assigned yet',color:'#B91C1C',control:i=>`<select class="tbl-sel" onclick="event.stopPropagation()" onchange="parkingFixInitiative('${i.id}',this.value)"><option value="">— pick a list —</option>${bccUserLists().map(l=>`<option value="${l.id}">${esc(l.name)}</option>`).join('')}</select>`},
   {key:'category',mf:'Category',label:'🏷️ Needs Category',sub:'Category missing',color:'#92400E',control:i=>`<select class="tbl-sel" onclick="event.stopPropagation()" onchange="parkingFixCategory('${i.id}',this.value)"><option value="">— pick a category —</option>${CATS.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('')}</select>`},
   {key:'level',mf:'Level',label:'⁉️ Needs Level',sub:'Pick Primary or Supporting',color:'#7C3AED',control:i=>_pcSel(i.id,'level',[['primary','⭐ Primary'],['supporting','🔹 Supporting']],i.level||'')},
   {key:'effort',mf:'Effort Level',label:'⚡ Needs Effort',sub:'Assign an effort tier',color:'#0369A1',control:i=>_pcSel(i.id,'effort',_EFF_OPTS,i.effort||'')},
@@ -6320,7 +6320,7 @@ function runDump(){
     const div=document.createElement('div');div.className='ai';div.id='cl-'+id;div.style.cursor='default';
     div.innerHTML=`<div class="ai-top">${tBadge(type)}<div class="ai-name">${esc(line)}</div></div>
       <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;padding-top:7px;border-top:1px solid var(--bdr)">
-        <select style="font-size:11px;padding:4px 8px;border:1px solid var(--bdr2);border-radius:var(--r);background:var(--soft);color:var(--txt);font-family:'DM Sans',sans-serif;outline:none" id="ls-${id}">${S.lists.map(l=>`<option value="${l.id}"${l.id==='uncat'?' selected':''}>${l.name}</option>`).join('')}</select>
+        <select style="font-size:11px;padding:4px 8px;border:1px solid var(--bdr2);border-radius:var(--r);background:var(--soft);color:var(--txt);font-family:'DM Sans',sans-serif;outline:none" id="ls-${id}">${bccUserLists().map(l=>`<option value="${l.id}">${l.name}</option>`).join('')}</select>
         <button class="btn sm" onclick="quickAdd('${id}','${esc(line).replace(/'/g,'&#39;')}','${type}')">+ Add</button>
         <button class="btn sm primary" onclick="openModal('${id}','${esc(line).replace(/'/g,'&#39;')}','${type}')">Plan It</button>
         <button class="btn sm ghost" onclick="cycleType('${id}','${type}')">Reclassify</button>
@@ -6410,6 +6410,12 @@ function cycleType(clId,cur){
   btns[2].onclick=()=>cycleType(clId,next);
 }
 
+// BCC v5 — only these three Lists are assignable/filterable in the business workspace.
+function bccUserLists(){
+  const ids=new Set(['rla','sf','ss']);
+  return (S.lists||[]).filter(l=>l&&ids.has(l.id));
+}
+
 // MODAL
 function openModal(clId,text,type,itemId){
   const _routeItem=itemId?getItem(itemId):null;
@@ -6464,7 +6470,7 @@ function openDateSeriesModal(projectId){
   const parent=projectId?getItem(projectId):null;
   const projects=S.items.filter(i=>i.type==='project'&&i.status!=='done');
   const projOpts='<option value="">— None (standalone tasks) —</option>'+projects.map(p=>`<option value="${p.id}"${parent&&parent.type==='project'&&p.id===parent.id?' selected':''}>${esc((p.name||'').slice(0,60))}</option>`).join('');
-  const listOpts='<option value="">— Select List —</option>'+S.lists.map(l=>`<option value="${l.id}">${esc(l.name)}</option>`).join('');
+  const listOpts='<option value="">— Select List —</option>'+bccUserLists().map(l=>`<option value="${l.id}">${esc(l.name)}</option>`).join('');
   const sortedCats=[...CATS].sort((a,b)=>a.localeCompare(b));
   const catOptHtml=sortedCats.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');
   const effortOptHtml=[['','-- Select --'],['easy','🟢 Easy (1 pt)'],['medium','🟠 Medium (3 pts)'],['hard','🔴 Hard (5 pts)'],['epic','⭐ Epic (10 pts)'],['legendary','👑 Legendary (15 pts)'],['ultimate','🔥 Ultimate (20 pts)'],['mythic','⚡ Mythic (30 pts)'],['elite','💎 Elite (40 pts)'],['master','🛡️ Master (50 pts)'],['titan','🐉 Titan (60 pts)'],['cosmic','🌌 Cosmic (70 pts)'],['immortal','👑 Immortal (80 pts)'],['ascended','🚀 Ascended (90 pts)'],['transcendent','🏆 Transcendent (100 pts)']].map(([v,l])=>`<option value="${v}">${l}</option>`).join('');
@@ -6917,7 +6923,7 @@ function renderModalBody(type,item,prefill){
   // 0184 (v209) — habit was listed twice here. Both options rendered with the
   // selected attribute, so the browser honoured the last one and the dropdown
   // jumped positions when you picked the first.
-  const typeOpts=[['ask','Ask'],['change','Change'],['clientbuild','Client Build'],['content','Content'],['industryprofile','Industry Profile'],['product','Product'],['phase','Phase'],['release','Release'],['task','Task'],['workflow','Workflow']].map(([v,l])=>`<option value="${v}"${type===v?' selected':''}>${l}</option>`).join('');
+  const typeOpts=[['goal','Goal'],['ask','Ask'],['change','Change'],['clientbuild','Client Build'],['content','Content'],['industryprofile','Industry Profile'],['product','Product'],['phase','Phase'],['release','Release'],['task','Task'],['workflow','Workflow']].map(([v,l])=>`<option value="${v}"${type===v?' selected':''}>${l}</option>`).join('');
   const statOpts=[['notstarted','Not Started'],['planned','Planned'],['inprogress','In Progress'],['behind','Behind'],['onhold','⏸️ On Hold'],['done','Done'],['cancelled','Cancelled'],['placeholder','📌 Placeholder']].map(([v,l])=>`<option value="${v}"${item&&item.status===v?' selected':''}>${l}</option>`).join('');
   // 0135/0142 — structured reason dropdowns, replacing the old "reason required in Notes" behavior
   const cancelReasonOpts=[['','— Select —'],['notcompleted','Did Not Complete'],['duplicate','Duplicate'],['nolongerneeded','No Longer Needed'],['blocked','Blocked / Dependency Failed'],['other','Other']].map(([v,l])=>`<option value="${v}"${item&&item.cancellationReason===v?' selected':''}>${l}</option>`).join('');
@@ -6926,7 +6932,7 @@ function renderModalBody(type,item,prefill){
   const listChecks=`<div>
     <select id="list-dropdown" onchange="onListDropChange(this)" style="width:100%;padding:7px 10px;border:1px solid var(--bdr2);border-radius:var(--r);font-size:12px;font-family:'DM Sans',sans-serif;background:var(--soft);color:var(--txt);outline:none;cursor:pointer">
       <option value="">— Select a list to add —</option>
-      ${S.lists.map(l=>`<option value="${l.id}">${l.name}</option>`).join('')}
+      ${bccUserLists().map(l=>`<option value="${l.id}">${l.name}</option>`).join('')}
     </select>
     <div id="list-checks" style="display:flex;flex-wrap:wrap;gap:4px;margin-top:6px">
       ${ML.listIds.map(lid=>{const l=S.lists.find(x=>x.id===lid);if(!l)return'';return`<span class="lci sel" style="background:${l.color};border-color:${l.color};display:inline-flex;align-items:center;gap:3px"><span class="ld" style="background:rgba(255,255,255,.4)"></span>${esc(l.name)}<button onclick="removeList('${lid}')" style="background:none;border:none;cursor:pointer;padding:0;line-height:1;color:rgba(255,255,255,.7);font-size:10px">×</button></span>`;}).join('')}
@@ -9940,7 +9946,7 @@ function switchBulkTab(tab){
   if(tab==='add'){
     bulkAddLists=[];bulkAddCats=[];
     const bl=document.getElementById('ba-lists');
-    if(bl)bl.innerHTML=S.lists.map(l=>`<div class="lci" onclick="toggleBulkList('add','${l.id}',this,'${l.color}')"><span class="ld" style="background:${l.color}"></span>${esc(l.name)}</div>`).join('');
+    if(bl)bl.innerHTML=bccUserLists().map(l=>`<div class="lci" onclick="toggleBulkList('add','${l.id}',this,'${l.color}')"><span class="ld" style="background:${l.color}"></span>${esc(l.name)}</div>`).join('');
     const bc=document.getElementById('ba-cats');
     if(bc)bc.innerHTML=CATS.map(c=>`<div class="cci" onclick="toggleBulkCat('add','${c}',this)">${c}</div>`).join('');
     const noOpt='<option value="">-- None --</option>';
@@ -9951,9 +9957,9 @@ function switchBulkTab(tab){
     bulkUpdateLists=[];bulkUpdateCats=[];bulkRemoveLists=[];bulkRemoveCats=[];
     populateBulkUpdateItems();
     const bl=document.getElementById('bu-lists');
-    if(bl)bl.innerHTML=S.lists.map(l=>`<div class="lci" onclick="toggleBulkList('update','${l.id}',this,'${l.color}')"><span class="ld" style="background:${l.color}"></span>${esc(l.name)}</div>`).join('');
+    if(bl)bl.innerHTML=bccUserLists().map(l=>`<div class="lci" onclick="toggleBulkList('update','${l.id}',this,'${l.color}')"><span class="ld" style="background:${l.color}"></span>${esc(l.name)}</div>`).join('');
     const blr=document.getElementById('bu-lists-remove');
-    if(blr)blr.innerHTML=S.lists.map(l=>`<div class="lci" style="border-color:rgba(246,62,115,.3)" onclick="toggleBulkListRemove('${l.id}',this,'${l.color}')"><span class="ld" style="background:${l.color}"></span>${esc(l.name)}</div>`).join('');
+    if(blr)blr.innerHTML=bccUserLists().map(l=>`<div class="lci" style="border-color:rgba(246,62,115,.3)" onclick="toggleBulkListRemove('${l.id}',this,'${l.color}')"><span class="ld" style="background:${l.color}"></span>${esc(l.name)}</div>`).join('');
     const bc=document.getElementById('bu-cats');
     if(bc)bc.innerHTML=CATS.map(c=>`<div class="cci" onclick="toggleBulkCat('update','${c}',this)">${c}</div>`).join('');
     const bcr=document.getElementById('bu-cats-remove');
@@ -10174,7 +10180,7 @@ function onBulkTypeChange(prefix){
   if(prefix==='ba'&&(type==='change'||type==='release')&&!bulkAddLists.length){ // v262 (0666) default Change->Change Management, Release->Release Management
     bulkAddLists=[type==='change'?'lccop-change':'releases'];
     const _bl=document.getElementById('ba-lists');
-    if(_bl)_bl.innerHTML=S.lists.map(l=>`<div class="lci${bulkAddLists.includes(l.id)?' sel':''}" style="${bulkAddLists.includes(l.id)?`background:${l.color};border-color:${l.color}`:''}" onclick="toggleBulkList('add','${l.id}',this,'${l.color}')"><span class="ld" style="background:${l.color}"></span>${esc(l.name)}</div>`).join('');
+    if(_bl)_bl.innerHTML=bccUserLists().map(l=>`<div class="lci${bulkAddLists.includes(l.id)?' sel':''}" style="${bulkAddLists.includes(l.id)?`background:${l.color};border-color:${l.color}`:''}" onclick="toggleBulkList('add','${l.id}',this,'${l.color}')"><span class="ld" style="background:${l.color}"></span>${esc(l.name)}</div>`).join('');
     const _lbl=document.getElementById('ba-lists-count');if(_lbl)_lbl.textContent=bulkAddLists.length?'✓ '+bulkAddLists.length+' selected':'';
   }
   if(type==='clientbuild'){
@@ -10238,7 +10244,7 @@ function applyBulkAddTypeDefaults(type){
   const setBaLists=(ids)=>{
     bulkAddLists=[...ids];
     const bl=document.getElementById('ba-lists');
-    if(bl)bl.innerHTML=S.lists.map(l=>`<div class="lci${bulkAddLists.includes(l.id)?' sel':''}" style="${bulkAddLists.includes(l.id)?`background:${l.color};border-color:${l.color}`:''}" onclick="toggleBulkList('add','${l.id}',this,'${l.color}')"><span class="ld" style="background:${l.color}"></span>${esc(l.name)}</div>`).join('');
+    if(bl)bl.innerHTML=bccUserLists().map(l=>`<div class="lci${bulkAddLists.includes(l.id)?' sel':''}" style="${bulkAddLists.includes(l.id)?`background:${l.color};border-color:${l.color}`:''}" onclick="toggleBulkList('add','${l.id}',this,'${l.color}')"><span class="ld" style="background:${l.color}"></span>${esc(l.name)}</div>`).join('');
     const lbl=document.getElementById('ba-lists-count');if(lbl)lbl.textContent=bulkAddLists.length?'✓ '+bulkAddLists.length+' selected':'';
   };
   const setBaCats=(cs)=>{
@@ -11439,7 +11445,7 @@ function buildFbar(items,containerId,filterFn,activeF){
     const listDiv=document.createElement('div');
     listDiv.className='list-filter-chips';
     listDiv.style.cssText='margin-top:8px;display:flex;gap:5px;flex-wrap:wrap;align-items:center';
-    const listBtns=S.lists.map(l=>{const c=items.filter(i=>(i.listIds||[i.listId]).filter(Boolean).includes(l.id)).length;if(!c)return'';return`<button class="fc" onclick="filterByListChip('${l.id}',this)" data-list="${l.id}" style="border-color:${l.color}">${esc(l.name)} <span class="fn">${c}</span></button>`;}).join('');
+    const listBtns=bccUserLists().map(l=>{const c=items.filter(i=>(i.listIds||[i.listId]).filter(Boolean).includes(l.id)).length;if(!c)return'';return`<button class="fc" onclick="filterByListChip('${l.id}',this)" data-list="${l.id}" style="border-color:${l.color}">${esc(l.name)} <span class="fn">${c}</span></button>`;}).join('');
     if(listBtns){
       listDiv.innerHTML='<span style="font-size:10px;color:var(--txt2);text-transform:uppercase;letter-spacing:.8px;font-weight:500">List:</span>'+listBtns;
       if(cont.nextSibling)cont.parentNode.insertBefore(listDiv,cont.nextSibling);
@@ -11580,7 +11586,7 @@ function buildMultiFilters(){
   document.getElementById('mf-cat').innerHTML=cats.map(c=>`<div class="cat-chip${MF.cats.includes(c)?' active':''}" onclick="toggleMF('cats','${c}',this)">${c}</div>`).join('');
   buildTagFilter(S.items,'mf-tag','toggleMFTag',MF.tags||[],MFTagMode,'setMFTagMode'); // v255
   const listEl=document.getElementById('mf-list');
-  if(listEl)listEl.innerHTML=S.lists.map(l=>`<div class="cat-chip${MF.lists.includes(l.id)?' active':''}" onclick="toggleMF('lists','${l.id}',this)" style="${MF.lists.includes(l.id)?'border-color:'+l.color+';background:'+l.color+';color:#fff':''}" onmouseover="if(!this.classList.contains('active'))this.style.borderColor='${l.color}'" onmouseout="if(!this.classList.contains('active'))this.style.borderColor=''"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:${MF.lists.includes(l.id)?'rgba(255,255,255,.7)':l.color};margin-right:4px"></span>${esc(l.name)}</div>`).join('');
+  if(listEl)listEl.innerHTML=bccUserLists().map(l=>`<div class="cat-chip${MF.lists.includes(l.id)?' active':''}" onclick="toggleMF('lists','${l.id}',this)" style="${MF.lists.includes(l.id)?'border-color:'+l.color+';background:'+l.color+';color:#fff':''}" onmouseover="if(!this.classList.contains('active'))this.style.borderColor='${l.color}'" onmouseout="if(!this.classList.contains('active'))this.style.borderColor=''"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:${MF.lists.includes(l.id)?'rgba(255,255,255,.7)':l.color};margin-right:4px"></span>${esc(l.name)}</div>`).join('');
   // 0095 — Sprint filter chips: only sprints that actually contain items (by start date), plus a No Sprint option.
   const sprintEl=document.getElementById('mf-sprint');
   if(sprintEl){
@@ -11755,7 +11761,7 @@ function toggleItemsBulkPanel(){
 function renderIBALists(){
   ibaBulkLists=[];
   const wrap=document.getElementById('iba-lists');if(!wrap)return;
-  wrap.innerHTML=S.lists.filter(l=>l.id!=='uncat').map(l=>`<span onclick="toggleIBAList('${l.id}',this)" style="padding:3px 10px;border-radius:20px;font-size:11px;cursor:pointer;border:1px solid var(--bdr2);color:var(--txt2);background:var(--card);transition:all .15s">${esc(l.name)}</span>`).join('');
+  wrap.innerHTML=bccUserLists().map(l=>`<span onclick="toggleIBAList('${l.id}',this)" style="padding:3px 10px;border-radius:20px;font-size:11px;cursor:pointer;border:1px solid var(--bdr2);color:var(--txt2);background:var(--card);transition:all .15s">${esc(l.name)}</span>`).join('');
 }
 function renderIBACats(){
   ibaBulkCats=[];
@@ -13264,7 +13270,7 @@ function toggleListPopup(id,cell){
     // Lazy-load content
     if(popup.dataset.loaded==='0'){
       const i=getItem(id);const cur=i?i.listIds||[]:[];
-      popup.innerHTML=S.lists.map(l=>`<label class="tbl-cat-opt"><input type="checkbox" ${cur.includes(l.id)?'checked':''} onchange="inlineListChg('${id}','${l.id}',this.checked)"><span class="ld" style="background:${l.color};display:inline-block;margin-right:3px"></span>${esc(l.name)}</label>`).join('');
+      popup.innerHTML=bccUserLists().map(l=>`<label class="tbl-cat-opt"><input type="checkbox" ${cur.includes(l.id)?'checked':''} onchange="inlineListChg('${id}','${l.id}',this.checked)"><span class="ld" style="background:${l.color};display:inline-block;margin-right:3px"></span>${esc(l.name)}</label>`).join('');
       popup.dataset.loaded='1';
     }
     popup.style.display='block';_openListPopup=popup;
@@ -13277,7 +13283,7 @@ document.addEventListener('click',()=>{
 
 // LISTS PAGE
 function renderLists(){
-  const visibleLists=S.lists.filter(l=>l.id!=='nos');
+  const visibleLists=bccUserLists();
   document.getElementById('lists-sub').textContent=`${visibleLists.length} lists - ${S.items.length} total action items`;
   const cardFor=l=>{
     const li=S.items.filter(i=>(i.listIds||[i.listId]).filter(Boolean).includes(l.id));
@@ -13479,7 +13485,7 @@ function renderDash(){
     </div>`;
   }).join('');
   // Lists progress
-  document.getElementById('dash-lists').innerHTML=S.lists.map(l=>{
+  document.getElementById('dash-lists').innerHTML=bccUserLists().map(l=>{
     const li=S.items.filter(i=>(i.listIds||[i.listId]).filter(Boolean).includes(l.id));
     const liActive=li.filter(i=>i.status!=='done'&&i.status!=='placeholder');
     const totalProg=li.reduce((s,i)=>s+calcProg(i),0);
@@ -17472,7 +17478,7 @@ function openPushWeekModal(opts){
   // Populate list selector — default to 13 Week Rotation if it exists
   const pl=document.getElementById('pw-list');
   if(pl){
-    pl.innerHTML=S.lists.map(l=>`<option value="${l.id}">${esc(l.name)}</option>`).join('');
+    pl.innerHTML=bccUserLists().map(l=>`<option value="${l.id}">${esc(l.name)}</option>`).join('');
     const rotList=S.lists.find(l=>l.name&&l.name.toLowerCase().includes('13') && l.name.toLowerCase().includes('rotation'));
     if(rotList)pl.value=rotList.id;
   }
@@ -29578,9 +29584,10 @@ try{recalc()}catch(_){}await saveNow();renderAll();const receipt={importedAt:new
   if(!window.S)return;
   const old=Array.isArray(S.lists)?S.lists:[];
   const release=old.find(x=>x&&x.id==='releases')||{id:'releases',name:'Releases',color:'#166534',system:true,numbered:false,maxNum:null};
-  // Only the three user-facing business Lists are retained; Releases remains hidden infrastructure for Release Management.
-  S.lists=[...CANON,release];
-  const allowed=new Set(['rla','sf','ss','releases']);
+  const change=old.find(x=>x&&(x.id==='lccop-change'||String(x.name||'').toLowerCase()==='change management'))||{id:'lccop-change',name:'Change Management',color:'#E91E8C',system:true,numbered:false,maxNum:null};
+  // Only RLA, Savvy Foundations and Savvy Structure are user-facing Lists. Release/Change remain hidden management infrastructure.
+  S.lists=[...CANON,release,change];
+  const allowed=new Set(['rla','sf','ss','releases','lccop-change']);
   (S.items||[]).forEach(i=>{
     if(!i)return;
     i.listIds=(Array.isArray(i.listIds)?i.listIds:[]).filter(id=>allowed.has(id));
@@ -29635,6 +29642,38 @@ try{recalc()}catch(_){}await saveNow();renderAll();const receipt={importedAt:new
 <!-- USER GUIDE: BCC v4 — Use Reset for Re-dump before replacing a prior LCC migration. It removes LCC-imported records while preserving BCC-native records and BCC Release history. User-facing Lists are RLA, Savvy Foundations and Savvy Structure. -->
 <!-- CHANGE LOG: BCC v4 — Added clean re-dump reset, migration-origin markers, and canonical three-list enforcement. -->
 <!-- RELEASE NOTES: BCC v4 — Migration safety refinement. Release infrastructure remains available without appearing as a fourth business List. -->
+
+<script id="bcc-v5-list-taxonomy">
+(function(){
+ function normalize(){
+  if(!window.S||!Array.isArray(S.lists))return false;
+  const defs=[
+   {id:'rla',name:'RLA',color:'#E91E8C'},
+   {id:'sf',name:'Savvy Foundations',color:'#5B2EFF'},
+   {id:'ss',name:'Savvy Structure',color:'#FF5C35'}
+  ];
+  const rel=S.lists.find(l=>l&&l.id==='releases')||{id:'releases',name:'Releases',color:'#166534',system:true};
+  const ch=S.lists.find(l=>l&&(l.id==='lccop-change'||String(l.name||'').toLowerCase()==='change management'))||{id:'lccop-change',name:'Change Management',color:'#E91E8C',system:true};
+  S.lists=[...defs,rel,ch];
+  const allowed=new Set(['rla','sf','ss','releases','lccop-change']);
+  (S.items||[]).forEach(i=>{if(!i)return;i.listIds=(i.listIds||[]).filter(x=>allowed.has(x));if(Array.isArray(i.lists))i.lists=i.lists.filter(x=>allowed.has(x));});
+  return true;
+ }
+ function seed(){
+  if(!window.S||!Array.isArray(S.items)||typeof makeItem!=='function')return false;
+  normalize();
+  if(!S.items.some(x=>x&&x.type==='release'&&String(x.releaseVersion||'').replace(/^v/i,'')==='5')){
+   const x=makeItem({name:'v5 — Canonical BCC List Taxonomy',type:'release',status:'inprogress',planningStage:'ready',listIds:['releases'],lists:['releases'],startDate:'2026-08-25',releaseVersion:'5',releaseType:'patch',releaseStatus:'testing',testResult:'testing',releaseModules:['Action Items','Bulk Add','Bulk Update','Filters','Lists'],releaseChangelog:'Restricted every user-facing BCC List selector to RLA, Savvy Foundations, and Savvy Structure, including Add/Edit Action Item, Bulk Add, Bulk Update, inline table editing, filters, and Lists views. Preserved hidden Release Management and Change Management infrastructure.',releaseNotes:'Business, personal, planning, maintenance and other inherited LCC Lists are no longer assignable or shown in BCC list controls.',releaseSummary:'Canonical three-list taxonomy across BCC.',releaseUserGuide:'Assign BCC Action Items only to RLA, Savvy Foundations, or Savvy Structure. Release Management and Change Management continue to work as dedicated management pages but are not selectable business Lists.',releaseTechnicalNotes:'bccUserLists() is the canonical source for user-facing list selectors. Hidden system list IDs releases and lccop-change remain available only for their management modules.',updatedAt:Date.now()});
+   x.listNums=x.listNums||{};x.listNums.releases=5;x.seqNum='5';S.items.push(x);
+  }
+  try{save()}catch(_){};try{renderAll()}catch(_){};return true;
+ }
+ let n=0,t=setInterval(()=>{if(seed()||++n>40)clearInterval(t)},250);
+})();
+</script>
+<!-- USER GUIDE: BCC v5 — BCC Lists are RLA, Savvy Foundations and Savvy Structure only. All Add/Edit/Bulk/filter list controls use this taxonomy. -->
+<!-- CHANGE LOG: BCC v5 — Removed inherited LCC Lists from all user-facing BCC selectors while preserving hidden Release/Change management infrastructure. -->
+<!-- RELEASE NOTES: BCC v5 — Canonical List taxonomy patch. No LCC changes. -->
 </body>
 </html>
 
