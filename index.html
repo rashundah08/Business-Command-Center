@@ -924,7 +924,7 @@ html,body{height:100%;background:var(--bg);color:var(--txt);font-family:'DM Sans
 <style id='business-cc-shell'>:root{--bcc-violet:#5B2EFF;--bcc-coral:#FF5C35;--bcc-magenta:#E91E8C;--bcc-amber:#F5A623;--bcc-ink:#0D0D12;--bcc-surface:#F8F8FC}.sidebar{background:linear-gradient(180deg,#0D0D12,#171027)!important}.sb-eye{color:#A8A5B8!important}.sb-name{color:#fff!important;font-family:'DM Sans',sans-serif!important;font-weight:800!important}.sb-name span{color:#FF5C35!important}.nb{color:#D8D5E3!important}.nb.active{background:linear-gradient(90deg,#5B2EFF,#E91E8C)!important;color:#fff!important}.nb:hover{background:rgba(91,46,255,.2)!important;color:#fff!important}.content{background:#F8F8FC!important}.bcc-brandbar{height:4px;background:linear-gradient(90deg,#5B2EFF,#E91E8C,#FF5C35,#F5A623)}</style></head>
 <body>
 <div class="app">
-<div class="sidebar" id="sidebar"><div class="bcc-brandbar"></div><div class="sb-logo"><div class="sb-eye">Business Command Center</div><div class="sb-name">Savvy<span>.</span></div></div><div class="sb-sec"><div class="sb-lbl">Command</div><button class="nb active" id="nav-sfscore" onclick="showPage('sfscore',this)">★ SF Scorecard</button><button class="nb" id="nav-dash" onclick="showPage('dash',this)">Dashboard</button><button class="nb" id="nav-planning" onclick="showPage('planning',this)">Planning Queue</button><button class="nb" id="nav-sprints" onclick="showPage('sprints',this)">Sprint Planner</button><button class="nb" id="nav-items" onclick="showPage('items',this)">All Action Items</button></div><div class="sb-sec"><div class="sb-lbl">Lists</div><button class="nb" onclick="bccGoListName('RLA',this)">RLA</button><button class="nb" onclick="bccGoListName('Savvy Foundations',this)">Savvy Foundations</button><button class="nb" onclick="bccGoListName('Savvy Structure',this)">Savvy Structure</button><button class="nb" id="nav-itemtags" onclick="showPage('itemtags',this)">Tags</button></div><div class="sb-sec"><div class="sb-lbl">Management</div><button class="nb" id="nav-releases" onclick="goToList('releases')">Release Management</button><button class="nb" onclick="bccGoListName('Change Management',this)">Change Management</button><button class="nb" id="nav-knowledge" onclick="showPage('knowledge',this)">Knowledge Hub</button></div><div class="sb-sec"><div class="sb-lbl">Libraries</div><button class="nb" id="nav-productcatalog" onclick="showPage('productcatalog',this)">Product Catalog</button><button class="nb" id="nav-industryprofile" onclick="showPage('industryprofile',this)">Industry Profiles</button><button class="nb" id="nav-content" onclick="showPage('content',this)">Content Planner</button><button class="nb" id="nav-fieldcatalog" onclick="showPage('fieldcatalog',this)">Field Options Catalog</button><button class="nb" id="nav-workflows" onclick="showPage('workflows',this)">Workflows</button><button class="nb" id="nav-taglibrary" onclick="showPage('taglibrary',this)">Tag Library</button></div><div class="sb-sec"><button class="nb" onclick="window.open('https://rashundah08.github.io/life-command-center/','_blank','noopener')">↗ Life Command Center</button></div></div>
+<div class="sidebar" id="sidebar"><div class="bcc-brandbar"></div><div class="sb-logo"><div class="sb-eye">Business Command Center</div><div class="sb-name">Savvy<span>.</span></div><div id="bcc-meta" style="margin-top:8px;font-size:10px;line-height:1.65;color:#A8A5B8"><div><strong style="color:#fff">BCC v2</strong></div><div id="bcc-meta-date">—</div><div id="bcc-meta-calwk">Calendar Week —</div><div id="bcc-meta-sprint">Sprint —</div><div id="bcc-meta-time">—</div></div></div><div class="sb-sec"><div class="sb-lbl">Command</div><button class="nb active" id="nav-sfscore" onclick="showPage('sfscore',this)">★ SF Scorecard</button><button class="nb" id="nav-dash" onclick="showPage('dash',this)">Dashboard</button><button class="nb" id="nav-planning" onclick="showPage('planning',this)">Planning Queue</button><button class="nb" id="nav-sprints" onclick="showPage('sprints',this)">Sprint Planner</button><button class="nb" id="nav-items" onclick="showPage('items',this)">All Action Items</button></div><div class="sb-sec"><div class="sb-lbl">Lists</div><button class="nb" onclick="bccGoListName('RLA',this)">RLA</button><button class="nb" onclick="bccGoListName('Savvy Foundations',this)">Savvy Foundations</button><button class="nb" onclick="bccGoListName('Savvy Structure',this)">Savvy Structure</button><button class="nb" id="nav-itemtags" onclick="showPage('itemtags',this)">Tags</button></div><div class="sb-sec"><div class="sb-lbl">Management</div><button class="nb" id="nav-releases" onclick="goToList('releases')">Release Management</button><button class="nb" onclick="bccGoListName('Change Management',this)">Change Management</button><button class="nb" id="nav-knowledge" onclick="showPage('knowledge',this)">Knowledge Hub</button></div><div class="sb-sec"><div class="sb-lbl">Libraries</div><button class="nb" id="nav-productcatalog" onclick="showPage('productcatalog',this)">Product Catalog</button><button class="nb" id="nav-industryprofile" onclick="showPage('industryprofile',this)">Industry Profiles</button><button class="nb" id="nav-content" onclick="showPage('content',this)">Content Planner</button><button class="nb" id="nav-fieldcatalog" onclick="showPage('fieldcatalog',this)">Field Options Catalog</button><button class="nb" id="nav-workflows" onclick="showPage('workflows',this)">Workflows</button><button class="nb" id="nav-taglibrary" onclick="showPage('taglibrary',this)">Tag Library</button></div><div class="sb-sec"><button class="nb" onclick="window.open('https://rashundah08.github.io/life-command-center/','_blank','noopener')">↗ Life Command Center</button></div></div>
 <div class="main">
   <div class="topbar">
     <button class="ham" onclick="document.getElementById('sidebar').classList.toggle('open')"><span></span><span></span><span></span></button>
@@ -3252,7 +3252,6 @@ const DEFAULT_LISTS=[
   {id:'life',name:'Life Goals',color:'#0FA3A3',system:true,numbered:false,maxNum:null},
   {id:'nos',name:'1,000 NOs Challenge',color:'#EF9F27',system:true,numbered:false,maxNum:null},
   {id:'rla',name:'RLA',color:'#F63E73',system:false,numbered:false,maxNum:null},
-  {id:'patches',name:'Patch Challenges',color:'#8b1a4a',system:true,numbered:true,maxNum:500},
   {id:'releases',name:'Releases',color:'#166534',system:true,numbered:false,maxNum:null},
   {id:'projtasks',name:'Project Tasks',color:'#185FA5',system:true,numbered:false,maxNum:null},
   {id:'uncat',name:'No List',color:'#6B7280',system:true,numbered:false,maxNum:null},
@@ -3782,7 +3781,6 @@ function loadFromDriveData(p){
   if(p.digitalLibrary)S.digitalLibrary=p.digitalLibrary; // v361 — Digital Library
       if(p.contentV191Migrated)S.contentV191Migrated=p.contentV191Migrated;
       if(p.financeTxV283Migrated)S.financeTxV283Migrated=p.financeTxV283Migrated;
-  if(!S.lists.find(l=>l.id==='patches'))S.lists.push({id:'patches',name:'Patch Challenges',color:'#8b1a4a',system:true,numbered:true,maxNum:500});
   if(!S.lists.find(l=>l.id==='projtasks'))S.lists.push({id:'projtasks',name:'Project Tasks',color:'#185FA5',system:true,numbered:false,maxNum:null});
   runSchemaMigration();
   if(typeof window.ensureRetroReleaseHistory==='function')window.ensureRetroReleaseHistory();
@@ -3988,8 +3986,7 @@ async function load(){
       if(p.contentV191Migrated)S.contentV191Migrated=p.contentV191Migrated;
       if(p.companySops)S.companySops=p.companySops; // v156 — Company SOP link registry
       // v324 — init() performs the single post-migration recalc.
-      if(!S.lists.find(l=>l.id==='patches'))S.lists.push({id:'patches',name:'Patch Challenges',color:'#8b1a4a',system:true,numbered:true,maxNum:500});
-      if(!S.lists.find(l=>l.id==='projtasks'))S.lists.push({id:'projtasks',name:'Project Tasks',color:'#185FA5',system:true,numbered:false,maxNum:null});
+          if(!S.lists.find(l=>l.id==='projtasks'))S.lists.push({id:'projtasks',name:'Project Tasks',color:'#185FA5',system:true,numbered:false,maxNum:null});
       if(migrated&&fromAncient)toast('Your data has been restored from a previous version!',4000);
     }
   }catch(e){console.warn('Load failed:',e);}
@@ -4101,7 +4098,6 @@ function exportData(){const b=new Blob([JSON.stringify({lists:S.lists,items:S.it
 function importData(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{const d=JSON.parse(ev.target.result);S.lists=d.lists||S.lists;S.items=d.items||S.items;if(d.sot)S.sot=d.sot;if(d.rewards)S.rewards=d.rewards;if(d.rewardHistory)S.rewardHistory=d.rewardHistory;if(d.catalogSettings)S.catalogSettings=d.catalogSettings;if(d.dreamFund)S.dreamFund=d.dreamFund;if(d.digitalLibrary)S.digitalLibrary=d.digitalLibrary;
   // Run migrations
   S.items.forEach(i=>{if(!i.listIds||!i.listIds.length){if(i.listId)i.listIds=[i.listId];else i.listIds=['uncat'];}if(!i.categories)i.categories=i.category?[i.category]:[];});
-  if(!S.lists.find(l=>l.id==='patches'))S.lists.push({id:'patches',name:'Patch Challenges',color:'#8b1a4a',system:true,numbered:true,maxNum:500});
   if(!S.lists.find(l=>l.id==='projtasks'))S.lists.push({id:'projtasks',name:'Project Tasks',color:'#185FA5',system:true,numbered:false,maxNum:null});
   runSchemaMigration();
   recalc();
@@ -6855,7 +6851,7 @@ function ipPrint(id){
     '<h2>10. Recommended Packages & Pricing</h2><div class="pf"><b>Hosting Plan:</b> '+prod(o.ipHostingProduct)+'</div>'+fld('Credits Note',o.ipCreditsNote)+'<h4>Add-On Services</h4>'+addonsT+'<h4>SS DFY Build Pricing</h4>'+dfyT+
     '<h2>11. Growth Intelligence</h2><h4>Social Media Angles</h4>'+bl(o.ipSocialAngles)+'<h4>Email Subject Lines</h4>'+emailsT+'<h4>Referral & Partnership Opportunities</h4>'+refT+'<h4>Seasonal & Cyclical Triggers</h4>'+seaT+
     '<div class="foot">'+ipEsc(o.ipBrand||'Savvy')+' · Internal Operations Guide · '+ipEsc(o.name||'')+' · '+new Date().toLocaleDateString()+'</div>'+
-    '</body></html>';
+    '\n</body></html>';
   var w=window.open('','_blank');
   if(!w){toast&&toast('Enable pop-ups to print');return;}
   w.document.write(html);w.document.close();setTimeout(function(){try{w.focus();w.print();}catch(e){}},350);
@@ -14649,13 +14645,14 @@ function renderHeadquarters(){
  </div>`;
 }
 function showPage(page,btn){
+  if(page==='hub'||page==='patches')page='sfscore'; // BCC v2: LCC-only pages are not available here
   if(page==='fieldcatalog')page='catalog'; // v237 — merged into Field Option Catalog
   ['dash','initiative','headquarters','implementation','items','planning','nos','nos2','lists','dump','rewards','hub','sot','meal','health','homeops','inventory','catalog','taglibrary','workflows','fieldcatalog','productcatalog','industryprofile','habits','myarc','finance','sfscore','dreamfund','countdowns','wiab','sprints','content','parking','patches','hierarchy','rooms','automations','itemtags','knowledge'].forEach(p=>{const el=document.getElementById('pg-'+p);if(el)el.style.display=p===page?'block':'none';});
   if(page==='wiab')renderWIABPage();
   if(page==='sot'){setTimeout(renderSOTWIABEditor,80);}
   document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
   if(btn)btn.classList.add('active');
-  const tt={initiative:'Initiative Dashboard',headquarters:'Inside Headquarters',implementation:'Implementation Scorecard',taglibrary:'Tag Library',industryprofile:'Industry Profiles',dash:'Dashboard',items:'All Action Items',planning:'Planning Queue',nos:'1,000 NOs Challenge',nos2:'1,000 NOs 2.0',lists:'My Lists',dump:'Brain Dump',rewards:'Rewards Bank',hub:'Master Plan',sot:'13-Week SOT',meal:'Meal Planner',health:'Health & Wellness',homeops:'Home Operations',inventory:'Home Inventory',catalog:'Catalog Settings',productcatalog:'Product Catalog',habits:'Habits & Routines',myarc:'My Arc',finance:'Finance Tracker',sfscore:'SF Scorecard',dreamfund:'Dream Life Fund',countdowns:'Countdowns',wiab:'Who I Am Becoming',sprints:'Sprint Planner',content:'Content Planner',parking:'Parking Lot',patches:'Patch Challenges',hierarchy:'Hierarchy',rooms:'Rooms',automations:'Automations',itemtags:'Tags',knowledge:'Knowledge Hub'};
+  const tt={initiative:'Initiative Dashboard',headquarters:'Inside Headquarters',implementation:'Implementation Scorecard',taglibrary:'Tag Library',industryprofile:'Industry Profiles',dash:'Dashboard',items:'All Action Items',planning:'Planning Queue',nos:'1,000 NOs Challenge',nos2:'1,000 NOs 2.0',lists:'My Lists',dump:'Brain Dump',rewards:'Rewards Bank',sot:'13-Week SOT',meal:'Meal Planner',health:'Health & Wellness',homeops:'Home Operations',inventory:'Home Inventory',catalog:'Catalog Settings',productcatalog:'Product Catalog',habits:'Habits & Routines',myarc:'My Arc',finance:'Finance Tracker',sfscore:'SF Scorecard',dreamfund:'Dream Life Fund',countdowns:'Countdowns',wiab:'Who I Am Becoming',sprints:'Sprint Planner',content:'Content Planner',parking:'Parking Lot',hierarchy:'Hierarchy',rooms:'Rooms',automations:'Automations',itemtags:'Tags',knowledge:'Knowledge Hub'};
   document.getElementById('page-title').textContent=tt[page]||page;
   if(page==='items'){clearSelection();renderItems();}
   if(page==='planning'){clearSelection();renderPlanningQueue();}
@@ -14669,9 +14666,7 @@ function showPage(page,btn){
   if(page==='headquarters')renderHeadquarters();
   if(page==='implementation')renderImplementationScorecardV350();
   if(page==='rewards'){initRewards();renderRewards();}
-  if(page==='hub'){renderHub();setTimeout(()=>{if(typeof renderWIAB==='function')renderWIAB();},100);}
   if(page==='sot')renderSot();
-  if(page==='patches')renderPatchPage();
   if(page==='hierarchy')renderHierarchy(); // 0381 (v234)
   if(page==='parking')renderParking();
   if(page==='meal')renderMealPlanner();
@@ -29274,7 +29269,7 @@ setTimeout(()=>{ensure361();},120);
 <!-- CHANGE LOG: v361 — Added S.digitalLibrary persistence and UI; Source/Migration registers; photo collection manifest/naming/path generation; Important Document requirement/actual completeness engine with annual-year gaps; direct digital movie/book entry; Home Inventory physical-to-digital bridge; TV/device/backup/family-quota/inbox/attention records; CSV templates/import; multi-sheet Excel export; NAS configuration and redundancy warning; Digital Library task-reference routing; Inventory digital-version metadata export/support. -->
 <!-- RELEASE NOTES: v361 — Minor release built from v360. No new Action Item type was added. New permanent domain module: Digital Library. Home Inventory gains digitalVersionStatus and digitalLibraryIds linkage metadata. Core Action Item filters/type selectors/tBadge/recalc/applyFilter remain unchanged because Digital Library records are not Action Items. -->
 
-\n
+
 
 
 
@@ -29546,6 +29541,15 @@ setTimeout(()=>{try{v369NormalizeInventory();v369EnsureFunnel();v369DecorateSF()
 <!-- USER GUIDE: BCC v2 — BCC stores its data independently from LCC. Use ⇧ Import LCC to manually import a business migration JSON exported from LCC. The Life Command Center link opens the live LCC in a separate browser tab. -->
 <!-- CHANGE LOG: BCC v2 — Fixed rendered raw code, isolated BCC browser storage/Drive filename from LCC, changed LCC navigation to an external new-tab link, and added manual LCC business Action Item migration import. -->
 <!-- RELEASE NOTES: BCC v2 — Independence hotfix and one-way manual migration support. No automatic LCC/BCC synchronization. -->
+<script id="bcc-v2-isolation-fix">
+(function(){
+ function weekNum(d){var x=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()));x.setUTCDate(x.getUTCDate()+4-(x.getUTCDay()||7));var y=new Date(Date.UTC(x.getUTCFullYear(),0,1));return Math.ceil((((x-y)/86400000)+1)/7)}
+ function sprintNum(d){var start=new Date(2026,0,1),days=Math.floor((d-start)/86400000);return Math.max(1,Math.floor(days/14)+1)}
+ function meta(){var d=new Date(), o={weekday:'long',month:'long',day:'numeric',year:'numeric'};var e=document.getElementById('bcc-meta-date');if(e)e.textContent=d.toLocaleDateString('en-US',o);e=document.getElementById('bcc-meta-calwk');if(e)e.textContent='Calendar Week '+weekNum(d)+' of 53';e=document.getElementById('bcc-meta-sprint');if(e)e.textContent='Sprint '+sprintNum(d);e=document.getElementById('bcc-meta-time');if(e)e.textContent=d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})+' CT'}
+ function isolate(){try{if(window.S&&Array.isArray(S.lists))S.lists=S.lists.filter(function(l){return l&&l.id!=='patches'&&l.name!=='Patch Challenges'});var h=document.getElementById('pg-hub');if(h)h.remove();var p=document.getElementById('pg-patches');if(p)p.remove()}catch(e){console.warn('BCC isolation',e)}}
+ document.addEventListener('DOMContentLoaded',function(){isolate();meta();setInterval(meta,60000);setTimeout(isolate,500)});
+})();
+</script>
 </body>
 </html>
 
